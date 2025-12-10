@@ -56,3 +56,32 @@ print(f" ini adalah jumlah jagung di lokasi 2 {jumlah_jagung}")
 print("\n--- AKSES SPESIFIK No 3---")
 nama_lokasi = data_panen ['lokasi3']['nama_lokasi']
 print(f"ini adalah nama lokasi dari lokasi 3 adalah {nama_lokasi}")
+
+# No 4
+print("\n--- LOOP PADI & KEDELAI ---")
+for lokasi, info_panen in data_panen.items():
+     jumlah_padi = info_panen['hasil_panen']['padi']
+     jumlah_kedelai = info_panen['hasil_panen']['kedelai']
+     print(f"ini jumlah padi {jumlah_padi} dan ini jumlah kedelai {jumlah_kedelai}")
+
+# No 5
+print("\n--- LIST HASIL ---")
+list_padi = []
+list_kedelai = []
+for lokasi, info_panen in data_panen.items():
+     jumlah_padi = info_panen['hasil_panen']['padi']
+     jumlah_kedelai = info_panen['hasil_panen']['kedelai']
+     list_padi.append(jumlah_padi)
+     list_kedelai.append(jumlah_kedelai)
+print(list_padi)
+print(list_kedelai)
+
+# No 6
+print("\n--- STATUS KEBUN ---")
+for lokasi, info_panen in data_panen.items():
+     jumlah_padi = info_panen['hasil_panen']['padi']
+     jumlah_jagung = info_panen['hasil_panen']['jagung']
+     if jumlah_padi > 1300 or jumlah_jagung > 800:
+        print(f"{lokasi}:perlu perhatian khusus")
+     else: 
+        print(f"{lokasi}:kondisi baik") 
