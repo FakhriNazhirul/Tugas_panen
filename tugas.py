@@ -46,3 +46,13 @@ for info_panen in data_panen.values():
      tempat = info_panen['nama_lokasi'] 
      panen = info_panen['hasil_panen']
      print(f"lokasi berikut dari{tempat}, hasil panennya adalah {panen}")
+
+# No 2
+print("\n--- AKSES SPESIFIK ---")
+jumlah_jagung = data_panen ['lokasi2']['hasil_panen']['jagung']
+print(f" ini adalah jumlah jagung di lokasi 2 {jumlah_jagung}")
+
+# No 3
+print("\n--- AKSES SPESIFIK No 3---")
+nama_lokasi = data_panen ['lokasi3']['nama_lokasi']
+print(f"ini adalah nama lokasi dari lokasi 3 adalah {nama_lokasi}")
